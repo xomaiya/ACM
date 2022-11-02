@@ -1,16 +1,15 @@
 # ACM
 This code calculates adaptive coherence measure (ACM) and chimera speed: https://www.sciencedirect.com/science/article/pii/S096007792100895X
 
-We propose a robust universal approach to identify multiple network dynamical states, including stationary and travelling chimera states based on an adaptive coherence measure. 
-		Our approach allows automatic disambiguation of synchronized clusters, travelling waves, chimera states, and asynchronous regimes. In addition, our method can determine the number of clusters in the case of cluster synchronization. We further couple our approach with a new speed calculation method for travelling chimeras. We validate our approach by an example of a ring network of type II Morris-Lecar neurons with asymmetrical nonlocal inhibitory connections where we identify a rich repertoire of coherent and wave states. We propose that the method is robust for the networks of phase oscillators and extends to a general class of relaxation oscillator networks.
-    
+We propose a robust universal approach to identify multiple network dynamical states, including stationary and travelling chimera states based on an adaptive coherence measure. Our approach allows automatic disambiguation of synchronized clusters, travelling waves, chimera states, and asynchronous regimes. In addition, our method can determine the number of clusters in the case of cluster synchronization. 
+
 The criterion is based on the $\chi^2$-parameter [1] and involves the optimization problem:
 
 $R^2 = \max_{\Delta\mathbf{t} = (\Delta t_1, \Delta t_2, .., \Delta t_N)} \chi^2(\{V_i(t - \Delta t_i)\}_{i=1}^N)$,
 
 where $\Delta\mathbf{t} = (\Delta t_1, \Delta t_2, .., \Delta t_N)$ is a time delay vector that contains $L$ unique time lags, and $\chi^2$-defines as follow:
 
-$$	\chi^2 = \frac{\sigma^2_V}{\frac{1}{N}\sum^{N}_{i=1}{\sigma^2_{V_i}}} $$,
+$ \chi^2 = \frac{\sigma^2_V}{\frac{1}{N}\sum^{N}_{i=1}{\sigma^2_{V_i}}}$,
 
 where $\sigma^2_V$ is variance of average membrane potential of the network $V(t) = \frac{1}{N}\sum_{i=1}^{N}V_i(t)$, and $\sigma^2_{V_i}$ is variance of membrane potential of the i-th neuron. 
 
