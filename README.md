@@ -6,18 +6,16 @@ We propose a robust universal approach to identify multiple network dynamical st
     
    To estimate coherence of a network, one can use $\chi^2$-parameter [1]:
 	
-	\begin{equation}
-	\chi^2 = \frac{\sigma^2_V}{\frac{1}{N}\sum^{N}_{i=1}{\sigma^2_{V_i}}},
-	\label{chi2}
-	\end{equation}
-	where $V(t)$ is the time series of membrane potentials in the representative time window and $\sigma^2_V$ is variance of average membrane potential of the network $V(t) = \frac{1}{N}\sum_{i=1}^{N}V_i(t)$:
-	\begin{equation}
-	\sigma^2_V = \langle V^2(t)\rangle_t - \langle V(t)\rangle_t^2,
-	\end{equation}
-	and $\sigma^2_{V_i}$ is variance of membrane potential of the i-th neuron:
-	\begin{equation}
-	\sigma^2_{V_i} = \langle V_i^2(t)\rangle_t - \langle V_i(t)\rangle_t^2.
-	\end{equation}
+
+$$\chi^2 = \frac{\sigma^2_V}{\frac{1}{N}\sum^{N}_{i=1}{\sigma^2_{V_i}}}$$,
+
+where $V(t)$ is the time series of membrane potentials in the representative time window and $\sigma^2_V$ is variance of average membrane potential of the network $V(t) = \frac{1}{N}\sum_{i=1}^{N}V_i(t)$:
+
+$$\sigma^2_V = \langle V^2(t)\rangle_t - \langle V(t)\rangle_t^2$$,
+
+and $\sigma^2_{V_i}$ is variance of membrane potential of the i-th neuron:
+
+$$\sigma^2_{V_i} = \langle V_i^2(t)\rangle_t - \langle V_i(t)\rangle_t^2$$.
 	
 	The parameter $\chi^2$ takes the values in [0,1]. For asynchronous state $\chi^2 \approx 1 / \sqrt{N}$ \cite{golomb2001mechanisms}, but for macroscopic neural networks $\chi^2 \rightarrow 0$. In case of full synchrony $\chi^2 = 1$ and for the values $0 < \chi^2 < 1$ the chimera states may exist. 
 
